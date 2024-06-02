@@ -32,7 +32,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="repo">
+  <div id="container" v-if="repo">
     <h1>{{ id }}</h1>
     <div id="nav">
       <router-link :to="{ name: 'RepoDetails' }">Details</router-link>
@@ -44,3 +44,11 @@ onMounted(() => {
     <router-view :repo="repo" />
   </div>
 </template>
+
+<style>
+  #container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
